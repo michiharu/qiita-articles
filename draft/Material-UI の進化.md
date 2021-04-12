@@ -35,6 +35,9 @@
 私はReactの開発スタイルでは、かなり小さな粒度のコンポーネントを作成して、それらを組み合わせてより大きなコンポーネントを作成します。このような開発スタイルではstyle propを利用することによる可読性の低下というデメリットは感じません。そのためプロトタイピングの段階ではstyleを利用したり、Material-ui の Box を積極的に使います。
 私にとって CSS class を使うのはコンポーネントの CSS API を利用する場面と、ダイナミックスタイルのために “@media(minWidth: 780px)” のような記述が必要になる場面でした。そして、“sx” prop の登場により、ダイナミックスタイルのための CSS class は不要になりました。CSS class が使えるときはパフォーマンスのために CSS class を使うべきですが、プロトタイプ開発の段階において、私はますますインラインスタイリングを頼りそうです。
 
+パフォーマンスとのトレードオフについては公式ページにまとまっています。
+[Material-UI System - Performance tradeoff](https://next.material-ui.com/ja/system/basics/#performance-tradeoff)
+
 ## Unstyled component
 Unstyled component は、装飾のためのCSSを持たないコンポーネントです。Material-UIが「Material Design」を提供するためのUIライブラリーではなく、あらゆるテーマを開発者が作成できるテーマプラットフォームでした。しかしテーマ機能を利用せずに Material Design ベースのコンポーネントをちょっとだけ上書きするようなチームメンバーの使い方を見ると全体の統一感がどんどん壊れていくので、テーマを意識した開発をやってほしいなとずっと思っていました。Unstyled component のリリースというニュース自体が、「テーマごと開発出来るんだ」という認識に繋がっていってもらいたいなと心から願いします。
 
